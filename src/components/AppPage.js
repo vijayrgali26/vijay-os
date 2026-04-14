@@ -1161,6 +1161,9 @@ export default function AppPage({ type }) {
             </div>
           </>
         );
+
+      default:
+        return null;
     }
   }
   return (

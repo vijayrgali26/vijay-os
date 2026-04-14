@@ -58,8 +58,11 @@ export default function Boot({ onFinish }) {
         return () => clearTimeout(timeout);
       }
     } else {
-      setTimeout(onFinish, 1600);
+      const timeout = setTimeout(onFinish, 1600);
+      return () => clearTimeout(timeout);
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [charIndex, lineIndex, showText]);
 
   return (
