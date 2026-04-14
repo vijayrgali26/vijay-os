@@ -1,0 +1,297 @@
+/* =========================
+   🌌 GLOBAL SETTINGS
+========================= */
+
+body {
+  margin: 0;
+  background: black;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+  color: white;
+}
+
+/* Smooth rendering */
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   ⌨️ CURSOR BLINK
+========================= */
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cursor {
+  animation: blink 1s step-start infinite;
+}
+
+/* =========================
+   🌀 SPIN (Boot Logo)
+========================= */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   ✨ FADE IN
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   🌠 FLOATING BACKGROUND
+========================= */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* =========================
+   💎 ICON EFFECTS
+========================= */
+
+.icon-box {
+  transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: scale(1.15);
+
+  box-shadow:
+    0 0 40px rgba(0, 255, 200, 0.9),
+    0 0 80px rgba(0, 255, 200, 0.4);
+}
+
+/* Icon text glow */
+
+.icon-text {
+  text-shadow: 0 0 8px rgba(0, 255, 200, 0.8);
+}
+
+/* =========================
+   🪟 WINDOW STYLE
+========================= */
+
+.window {
+  position: absolute;
+  border-radius: 12px;
+
+  background: rgba(20, 20, 20, 0.8);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+
+  color: white;
+
+  padding: 10px;
+}
+
+.window .title-bar {
+  background: rgba(0, 0, 0, 0.6);
+
+  padding: 6px;
+
+  font-weight: bold;
+
+  cursor: move;
+
+  border-radius: 8px 8px 0 0;
+}
+
+.window .content {
+  margin-top: 10px;
+}
+
+/* =========================
+   🕒 TASKBAR
+========================= */
+
+.taskbar {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 45px;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  backdrop-filter: blur(12px);
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 15px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Start button */
+
+.taskbar .start-button {
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  padding: 6px 14px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.taskbar .start-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Running apps */
+
+.taskbar .task {
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  padding: 6px 12px;
+
+  margin-left: 6px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.taskbar .task:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Clock */
+
+.taskbar .clock {
+  margin-left: auto;
+
+  font-weight: 500;
+
+  color: white;
+}
+
+/* =========================
+   🌟 GLASS PANEL EFFECT
+========================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 12px;
+}
+
+/* =========================
+   🌌 SCROLLBAR (Modern)
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 200, 0.6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 200, 0.9);
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 200, 1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
+  }
+}
+
+@keyframes rippleAnim {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
