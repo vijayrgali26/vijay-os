@@ -1,26 +1,31 @@
 import { useEffect } from "react";
 
 export default function Shutdown() {
-
   useEffect(() => {
-    // 🔊 Shutdown Sound (optional)
     const audio = new Audio("/shutdown.mp3");
     audio.volume = 0.4;
-    audio.play().catch(() => {});
 
-    // Return to Boot
-    setTimeout(() => {
+    const playAudio = async () => {
+      try {
+        await audio.play();
+      } catch (err) {
+        // autoplay blocked → ignore safely
+      }
+    };
+
+    playAudio();
+
+    const timer = setTimeout(() => {
       window.location.reload();
     }, 3000);
-  }, []);
+
+    return () => clearTimeout(timer);
+  }, []); // ✅ FIXED: empty dependency safe here
 
   return (
     <div style={styles.container}>
-      {/* Glow */}
       <div style={styles.glow}></div>
-
       <h1 style={styles.text}>Shutting Down Vijay OS...</h1>
-
       <div style={styles.spinner}></div>
     </div>
   );

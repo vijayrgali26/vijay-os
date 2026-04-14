@@ -1161,7 +1161,6 @@ export default function AppPage({ type }) {
             </div>
           </>
         );
-
       default:
         return null;
     }
@@ -1379,24 +1378,6 @@ const styles = {
 
   /* 🤖 AI SECTION */
 
-  aiContainer: {
-    maxWidth: "900px",
-    margin: "auto",
-    background: "rgba(255,255,255,0.08)",
-    padding: "25px",
-    borderRadius: "15px",
-    backdropFilter: "blur(12px)",
-    boxShadow: "0 0 25px rgba(0,255,200,0.4)",
-  },
-
-  chatBox: {
-    minHeight: "300px",
-    padding: "20px",
-    borderRadius: "12px",
-    background: "rgba(0,0,0,0.4)",
-    marginBottom: "20px",
-  },
-
   aiIntro: {
     color: "#ddd",
     marginBottom: "12px",
@@ -1407,26 +1388,6 @@ const styles = {
     paddingLeft: "20px",
     marginBottom: "20px",
     lineHeight: "1.8",
-  },
-
-  chatInputBox: {
-    display: "flex",
-    gap: "10px",
-  },
-
-  chatInput: {
-    flex: 1,
-    padding: "10px",
-    borderRadius: "8px",
-    border: "none",
-  },
-
-  chatButton: {
-    padding: "10px 18px",
-    borderRadius: "8px",
-    border: "none",
-    background: "#00ffcc",
-    cursor: "pointer",
   },
 
   /* 🤖 AI CHAT */
