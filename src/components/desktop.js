@@ -208,5 +208,4 @@ const styles = {
     cursor: "pointer",
     transition: "0.3s",
   },
-
 };
