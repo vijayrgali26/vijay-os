@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function AppPage({ type }) {
   const navigate = useNavigate();
 
-  // 🤖 AI STATE (MOVE HERE)
-
+  // 🤖 AI STATE
   const [messages, setMessages] = useState([
     {
       sender: "ai",
@@ -15,6 +14,7 @@ export default function AppPage({ type }) {
   ]);
 
   const [input, setInput] = useState("");
+
   function handleSend() {
     if (!input.trim()) return;
 
@@ -25,7 +25,8 @@ export default function AppPage({ type }) {
 
     const aiReply = getAIResponse(input);
 
-    setMessages([...messages, userMessage, aiReply]);
+    // ✅ FIX: safer state update (avoids stale state bug)
+    setMessages((prev) => [...prev, userMessage, aiReply]);
 
     setInput("");
   }
