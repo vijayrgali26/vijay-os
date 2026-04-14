@@ -41,9 +41,7 @@ export default function Boot({ onFinish }) {
     if (lineIndex < lines.length) {
       if (charIndex < lines[lineIndex].length) {
         const timeout = setTimeout(() => {
-          setDisplayedText(
-            (prev) => prev + lines[lineIndex][charIndex]
-          );
+          setDisplayedText((prev) => prev + lines[lineIndex][charIndex]);
           setCharIndex(charIndex + 1);
         }, 35);
 
@@ -77,9 +75,7 @@ export default function Boot({ onFinish }) {
         <div style={styles.logoContainer}>
           <div style={styles.logo}>⚡</div>
           <h1 style={styles.title}>VIJAY OS</h1>
-          <p style={styles.subtitle}>
-            Booting Intelligent Portfolio System
-          </p>
+          <p style={styles.subtitle}>Booting Intelligent Portfolio System</p>
         </div>
       )}
 
@@ -92,9 +88,7 @@ export default function Boot({ onFinish }) {
             <span style={styles.dotYellow}></span>
             <span style={styles.dotGreen}></span>
 
-            <span style={styles.terminalTitle}>
-              vijay-os@system:~ boot
-            </span>
+            <span style={styles.terminalTitle}>vijay-os@system:~ boot</span>
           </div>
 
           {/* Text */}
@@ -113,9 +107,7 @@ export default function Boot({ onFinish }) {
             ></div>
           </div>
 
-          <p style={styles.percentText}>
-            System Loading... {progress}%
-          </p>
+          <p style={styles.percentText}>System Loading... {progress}%</p>
         </div>
       )}
     </div>

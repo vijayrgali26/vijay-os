@@ -73,6 +73,7 @@ export default function AppPage({ type }) {
       text: "🤖 Try asking about projects, skills, academics, or contact info.",
     };
   }
+
   function renderContent() {
     switch (type) {
       // 👨‍💻 ABOUT
@@ -1427,24 +1428,6 @@ const styles = {
 
   /* 🤖 AI CHAT */
 
-  aiContainer: {
-    maxWidth: "800px",
-    margin: "auto",
-    background: "rgba(255,255,255,0.08)",
-    padding: "20px",
-    borderRadius: "15px",
-    backdropFilter: "blur(12px)",
-  },
-
-  chatBox: {
-    height: "400px",
-    overflowY: "auto",
-    padding: "15px",
-    background: "rgba(0,0,0,0.4)",
-    borderRadius: "12px",
-    marginBottom: "15px",
-  },
-
   userMessage: {
     background: "#00ffcc",
     color: "black",
@@ -1461,26 +1444,6 @@ const styles = {
     borderRadius: "10px",
     marginBottom: "10px",
     maxWidth: "70%",
-  },
-
-  chatInputBox: {
-    display: "flex",
-    gap: "10px",
-  },
-
-  chatInput: {
-    flex: 1,
-    padding: "10px",
-    borderRadius: "8px",
-    border: "none",
-  },
-
-  chatButton: {
-    padding: "10px 18px",
-    borderRadius: "8px",
-    border: "none",
-    background: "#00ffcc",
-    cursor: "pointer",
   },
 
   // 🧠 SKILLS UPGRADED STYLES
